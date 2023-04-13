@@ -32,7 +32,7 @@ def split_sound(wav_path, dir_path, silence_dur, silence_th):
     # split chunks
     chunks = split_on_silence(seg, min_silence_len=silence_dur, silence_thresh=silence_th)
     for i, ch in enumerate(chunks):
-        ch.export(f"{dir_path}/{i:5d}.wav", format="wav")
+        ch.export(f"{dir_path}/{i:05}.wav", format="wav")
 
 def ensure_dir(path, prog):
     if path == None:
