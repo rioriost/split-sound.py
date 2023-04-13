@@ -73,8 +73,8 @@ def main():
         help = "Duration of silence as delimiter in millisecond (default: 500)")
     parser.add_argument("--threshold", "-t",
         type = int,
-        default = -40,
-        help = "Threshold of sound volume as silence in dBFS (default: -40)")
+        default = -50,
+        help = "Threshold of sound volume as silence in dBFS (default: -50)")
 
     args = parser.parse_args()
 
