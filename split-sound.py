@@ -7,10 +7,16 @@ from datetime import datetime
 from mimetypes import guess_type
 
 try:
+    import librosa
+except:
+    print("Please install librosa before using. e.g. 'pip (or pip3) install librosa'");
+    sys.exit(1)
+
+try:
     from pydub import AudioSegment
     from pydub.silence import split_on_silence
 except:
-    print("Please install AudioSegment before using. e.g. 'pip (or pip3) install AudioSegment'");
+    print("Please install AudioSegment before using. e.g. 'pip (or pip3) install pydub'");
     sys.exit(1)
 
 def split_sound(wav_path, dir_path, silence_dur, silence_th):
